@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Garamond, serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f8f9f7;
+      color: #2f3e34;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #e5e7e9;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      color: #6b8a7a;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #2f3e34;
+      text-decoration: none;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    /* underline animation */
+    nav ul li a::after {
+      content: "";
+      width: 0;
+      height: 2px;
+      background: #6b8a7a;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #eef1ee, #f8f9f7);
+    }
+
+    .hero img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      object-fit: cover;
+      border: 4px solid #6b8a7a;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .hero img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hero h2 {
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #7c8f86;
+    }
+
+    .skills, .projects {
+      display: grid;
+      gap: 25px;
+    }
+
+    .skills {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .skill {
+      background: #e5e7e9;
+      padding: 25px;
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    .projects {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .project {
+      background: #e5e7e9;
+      padding: 25px;
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    }
+
+    .project h3 {
+      margin-bottom: 10px;
+    }
+
+    .project a {
+      display: inline-block;
+      margin-top: 12px;
+      color: #6b8a7a;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+      letter-spacing: 0.5px;
+    }
+
+    footer {
+      background: #d1d5d8;
+      padding: 25px;
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9rem;
+    }
+
+    h2 {
+      font-weight: normal;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <h1>My Portfolio</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="mahee-shah.jpeg" alt="Photo of Mahee">
+  <h2>Hi, I'm Mahee 👋</h2>
+  <p>Computer Science Student at the University of Iowa</p>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I'm a student and aspiring developer passionate about automation, AI tools,
+    thoughtful user experiences, and creative coding. This summer I will be working on projects integrating AI tools into railway applications.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="skills">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Design</div>
+    <div class="skill">AI Tools</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+
+    <div class="project">
+      <h3>Project 1</h3>
+      <p>Built an interactive hub for members of Applied AI to foster connections and collaboration.</p>
+      <a href="https://github.com/applied-ai-uiowa/applied-ai-web" target="_blank">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3>Project 2</h3>
+      <p>Created a climate simulation using NCAR CESM to model environmental changes.</p>
+      <a href="https://github.com/maheeashah/ncar-cesm-climate-simulation">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3>Coming Soon</h3>
+      <p>More work on the way ✨</p>
+      <a href="#">Stay Tuned</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: mahee-shah@uiowa.edu</p>
+  <p>
+    <a href="https://github.com/maheeashah" target="_blank">GitHub</a> | 
+    <a href="https://linkedin.com/in/mahee-shah" target="_blank">LinkedIn</a>
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 Mahee | Minimal Aesthetic Portfolio</p>
+</footer>
+
+</body>
+</html>
